@@ -5,7 +5,7 @@ static int wrong_words = 0;
 
 unsigned int Hash(char* word) {
 
-    int size = strlen(word);
+    	int size = strlen(word);
 	int i;
 	unsigned int value = 5381;
 
@@ -30,7 +30,7 @@ void InitHashTable(HashTable h) {
 void LoadDictionary(HashTable h) {
 
 	FILE* f = fopen("ascii.txt", "r");
-    char teste[words];
+    	char teste[words];
 	
 	char* p1 = NULL;
 
@@ -48,7 +48,7 @@ void LoadDictionary(HashTable h) {
 
 			strcpy(p1, teste);
 
-            ChainedInsert(h, p1);
+           		ChainedInsert(h, p1);
 
 		}
 		
@@ -64,9 +64,9 @@ void ChainedInsert(HashTable h, char* word) {
 
 	int index = (Hash(word) % length);
 
-    struct Sll* list = NULL;
+   	struct Sll* list = NULL;
 
-    if(h[index] == NULL) {
+    	if(h[index] == NULL) {
 
 		list = CreateNode();
 
@@ -114,7 +114,7 @@ int ChainedSearch(HashTable h, char* word) {
 void DestroyHashTable(HashTable h) {
 
 	FILE* f = fopen("ascii.txt", "r");
-    char teste[words];
+   	char teste[words];
 
 	if(f == NULL) {
 
@@ -132,7 +132,7 @@ void DestroyHashTable(HashTable h) {
 
 			strcpy(p1, teste);
 
-            EndProgram(h, p1);
+            		EndProgram(h, p1);
 
 			free(p1);
 
@@ -170,7 +170,7 @@ void PrintHashTable(HashTable h) {
 		if(list != NULL) {
 
 			PrintList(list, i);
-        }
+        	}
 	}
 
 }

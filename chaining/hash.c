@@ -124,7 +124,7 @@ void DestroyHashTable(HashTable h) {
 
 		char* p1 = NULL;
         
-        while(fscanf(f, "%s", teste) != EOF){
+        	while(fscanf(f, "%s", teste) != EOF){
 
 			int tam = strlen(teste) + 1;
 				

@@ -40,7 +40,7 @@ void LoadDictionary(HashTable h) {
 
 	}else{
         
-        while(fscanf(f, "%s", teste) != EOF){
+        	while(fscanf(f, "%s", teste) != EOF){
 
 			int tam = strlen(teste) + 1;
 				

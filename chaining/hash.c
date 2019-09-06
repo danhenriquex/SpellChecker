@@ -254,6 +254,8 @@ void Searching(HashTable h, char* file) {
 		}
 
 	}
+	
+	fclose(resultado);
 
 	DestroyList(list);
 

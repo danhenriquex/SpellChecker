@@ -244,16 +244,13 @@ void Searching(HashTable h, char* file) {
 
 	int k = 1;
 
-	for(int i = 0; i < list->size; ++i) {
-
-		while(aux != NULL) {
+	while(aux != NULL) {
 		
-			fprintf(resultado, "%i. %s\n", k, aux->palavra);
-			aux = aux->next;
-			++k;
-		}
-
+		fprintf(resultado, "%i. %s\n", k, aux->palavra);
+		aux = aux->next;
+		++k;
 	}
+
 	
 	fclose(resultado);
 

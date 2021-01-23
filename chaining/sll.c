@@ -25,16 +25,11 @@ void Append(struct Sll* list, char* word) {
 
     }else {
 
-        list->tail = list->head;
-
-        while(list->tail->next != NULL) 
-            list->tail = list->tail->next;
-
         n1 = (struct Node*) malloc(sizeof(struct Node));
-        
+        list->tail->next = n1;
+        list->tail = n1;
         n1->word = word;
         n1->next = NULL;
-        list->tail->next = n1;
 
     }
 
